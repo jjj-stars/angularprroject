@@ -13,7 +13,7 @@ export class AddProdComponent implements OnInit {
     product_price: new FormControl(''),
     product_image: new FormControl('')
   })
-
+  selectedFile=null;
   constructor(private product:ProductService) { }
 
   ngOnInit(): void {
@@ -27,6 +27,10 @@ export class AddProdComponent implements OnInit {
        // console.warn("result is here",result)
       })
       
+    }
+    onFileSelected(event){
+      this.selectedFile=event.target.files[0];
+      console.log(event)
     }
   
 closeAlert()

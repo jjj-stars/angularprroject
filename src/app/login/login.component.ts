@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
     username: new FormControl(''),
     password: new FormControl('')
   })
+ 
   constructor(private product: ProductService) { }
 
   ngOnInit(): void {
@@ -23,6 +24,7 @@ export class LoginComponent implements OnInit {
      console.log(res),
      err => console.log(err)
      )
+    // localStorage
  }
 }
 

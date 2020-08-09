@@ -7,9 +7,10 @@ export class ProductService {
   getuserLogin(value: any) {
     throw new Error("Method not implemented.");
   }
-url="http://localhost:3000/product"
-rootUrl="http://localhost:3000/"
-loginUrl="http://localhost:3000/login"
+  
+url="https://restapibee.herokuapp.com/view"
+rootUrl="https://restapibee.herokuapp.com/register"
+loginUrl="https://restapibee.herokuapp.com/login"
   constructor(private http:HttpClient) { }
   getlist()
   {
@@ -19,6 +20,7 @@ loginUrl="http://localhost:3000/login"
   {
     //console.warn("service",data)
    return  this.http.post(this.url,data);
+   
   }
   deleteProduct(id)
   {
